@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>  
+    
+    <h1><strong>Avaliação para linha de crédito</strong></h1>
+    <p>Preencha utilizando os valores de um a cinco. Utilize o botão <mark style="background-color: rgb(96, 99, 100); color: black; padding: 0.5%"><strong>?</strong></mark> para mais informações</p>
+   
+
+    <div class='inputs'>
+        <input id='score' style="width: 525px; height: 20px" placeholder="Score no Serasa"></input><button onclick="scoreInfo()">?</button><br><br>
+        <input id='payHistoric' style="width: 525px; height: 20px" placeholder="Historico de pagamento"></input> <button onclick="payHistoricInfo()">?</button><br><br>
+        <input id='payConditions' style="width: 525px; height: 20px" placeholder="Capacidade de pagamento"></input> <button onclick="payConditionsInfo()">?</button><br><br>
+        <input id='clientAge' style="width: 525px; height: 20px" placeholder="Relação cliente/empresa"></input> <button onclick="clientAgeInfo()">?</button><br><br>
+
+    </div>
+    <button id='button' style="width: 120px; height: 35px; background-color: brown;">Enviar</button><br><br>
+    <div id="display"></div>
+ 
+
+
+    <footer id="rodape">
+        <p style="font: 8pt arial;">2025 Ribeiro.dev. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

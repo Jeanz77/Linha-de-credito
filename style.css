@@ -1,0 +1,55 @@
+body {
+    background-color: #242222;
+    text-align: center;
+    align-items: left;
+    vertical-align: auto;
+    padding: 0%;
+    font: 12pt arial;
+}
+
+h1 {
+    font: 26pt arial;
+    background-color: brown;
+    padding: 1%;
+    margin: auto 14%;
+    
+}
+
+p {
+    padding: 2%;
+    margin: auto 13%;
+    font: 10pt arial;
+    
+    
+}
+
+.inputs {
+    padding: 4%;
+    margin: auto 10%;
+    
+}
+
+#display {
+
+    width: 525px;
+    height: 160px;
+    padding: 2%;
+    margin: auto 14%;
+    outline: 1px solid #8a8585;
+    background-color: #3f3d3d;
+    line-height: 1.5;
+    
+    
+
+    
+}
+
+#rodape {
+    text-align: center;
+    align-items: center;
+    vertical-align: auto;
+    padding: 2%;
+    margin: auto 14%;
+    
+
+}
