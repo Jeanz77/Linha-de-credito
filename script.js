@@ -1,24 +1,13 @@
         const score = document.getElementById('score')
-            function scoreInfo() {
-                window.alert(
-                 `1) Péssimo - 0 a 299 \n\n` +
-                 `2) Ruim - 300 a 499 \n\n` +
-                 `3) Regular - 500 a 699 \n\n` +
-                 `4) Bom - 700 a 899 \n\n` +
-                 `5) Excelente - 900 a 1000 `)
-            }
-        const payHistoric = document.getElementById('payHistoric')
-            function payHistoricInfo() {
-                window.alert(
-                 "1) Péssimo - Valor médio dos últimos pedidos abaixo de R$500,00. \n\n" +
-                 "2) Ruim - Valor médio dos últimos pedidos de R$500,00 a R$750,00. \n\n" +
-                 "3) Regular - Valor médio dos últimos pedidos de R$750,00 a R$1.500,00. \n\n" +
-                 "4) Bom - Valor médio dos últimos pedidos de R$1.500,00 a R$3.000,00. \n\n" +
-                 "5) Excelente - Valor médio dos últimos pedidos acima de R$3.000,00. ")   
-                 
-            }
         const payConditions = document.getElementById('payConditions')
-            function payConditionsInfo() {
+        const clientAge = document.getElementById('clientAge')
+        const payOne = document.getElementById("payOne")
+        const payTwo = document.getElementById("payTwo")
+        const payThree = document.getElementById("payThree")
+        const button = document.getElementById('button')
+        const display = document.getElementById('display')
+        
+        function payConditionsInfo() {
                 window.alert(
                  "1) Péssimo - Cliente com protestos ou sem comprovação de faturamento \n\n" +
                  "2) Ruim - Comprovante de faturamento inferior ao valor médio dos pedidos  \n\n" +
@@ -26,8 +15,8 @@
                  "4) Bom - Comprovante de faturamento duas vezes maior ao valor médio dos pedidos  \n\n" +
                  "5) Excelente - Comprovante de faturamento três vezes maior ao valor médio dos pedidos")
             }     
-        const clientAge = document.getElementById('clientAge')
-            function clientAgeInfo() {
+        
+        function clientAgeInfo() {
                 window.alert(
                  "1) Péssimo - Sem histórico de compra e/ou CNPJ com menos de um ano de existência \n\n" +
                  "2) Ruim - Sem histórico de compra nos últimos dois meses  \n\n" +
@@ -35,40 +24,71 @@
                  "4) Bom - Compra semanalmente ou é cliente a mais de dois anos fazendo compras regularmente   \n\n" +
                  "5) Excelente - Compra semanalmente ou é cliente a mais de quatro anos fazendo compras regularmente  ")
             }
-        const button = document.getElementById('button')
-        const display = document.getElementById('display')
+        
 
 
         const buttonAction = button.addEventListener('click', () => {
-        const scorePoint = 0  
+          let scorePoint = 0
+          let payHistoric = 0  
 
-            if (score >= 1 && score <= 299) {
+            if (score.value >= 1 && score.value <= 299) {
                 scorePoint = 1 * 0.3
             }
 
-            else if (score >= 300 && score <= 499) {
+            else if (score.value >= 300 && score.value <= 499) {
                 scorePoint = 2 * 0.3
 
             }
 
-            else if (score >= 500 && score <= 699) {
+            else if (score.value >= 500 && score.value <= 699) {
                 scorePoint = 3 * 0.3
             }
 
-            else if (score >= 700 && score <= 899) {
+            else if (score.value >= 700 && score.value <= 899) {
                 scorePoint = 4 * 0.3
             }
 
-            else if (score >= 900 && score <= 1000) {
+            else if (score.value >= 900 && score.value <= 1000) { 
                 scorePoint = 5 * 0.3
             }
             
+            else {
+                display.innerHTML = `Valor incorreto para score`
+            }
 
-        const payHistoricPoint = payHistoric.value * 0.3
-        const payConditionsPoint = payConditions.value * 0.3
-        const clientAgePoint = clientAge.value * 0.10
-            
-            const total = scorePoint + payHistoricPoint + payConditionsPoint + clientAgePoint
+        const payCalculate = (payOne.value + payTwo.value + payThree.value) / 3 
+        
+            if (payCalculate >= 500 && payCalculate <= 749) {
+               payHistoric = 1 * 0.3
+            }
+
+           else if (payCalculate >= 750 && payCalculate <= 1249) {
+              payHistoric = 2 * 0.3
+            }    
+
+           else if (payCalculate >= 1250 && payCalculate <= 1999) {
+              payHistoric = 3 * 0.3
+            }    
+
+           else if (payCalculate >= 2000 && payCalculate <= 2999) {
+              payHistoric = 4 * 0.3
+            }
+
+           else if (payCalculate >= 3000) {
+              payHistoric = 5 * 0.3
+            }    
+
+          else {
+
+           display.innerHTML = `Valor incorreto ou inferior ao minimo para linha de credito`
+
+           }
+        
+        const payHistoricPoint = payHistoric * 0.3
+        const payConditionsPoint = payConditions * 0.3
+        const clientAgePoint = clientAge * 0.10
+        
+        const total = scorePoint + payHistoricPoint + payConditionsPoint + clientAgePoint
             
          
 
