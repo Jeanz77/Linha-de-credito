@@ -27,37 +27,44 @@
         
 
 
-        const buttonAction = button.addEventListener('click', () => {
-          let scorePoint = 0
-          let payHistoric = 0  
+        const buttonAction = button.addEventListener('click', () => {   
+        
+        const scorePoint = 0
+        const payHistoric = 0
 
-            if (score.value >= 1 && score.value <= 299) {
+            if (score >= 1 && score <= 299) {
                 scorePoint = 1 * 0.3
+                
             }
 
-            else if (score.value >= 300 && score.value <= 499) {
+            else if (score>= 300 && score <= 499) {
                 scorePoint = 2 * 0.3
 
             }
 
-            else if (score.value >= 500 && score.value <= 699) {
+            else if (score >= 500 && score <= 699) {
                 scorePoint = 3 * 0.3
+                
             }
 
-            else if (score.value >= 700 && score.value <= 899) {
+            else if (score >= 700 && score <= 899) {
                 scorePoint = 4 * 0.3
+                
             }
 
-            else if (score.value >= 900 && score.value <= 1000) { 
+            else if (score >= 900 && score <= 1000) { 
                 scorePoint = 5 * 0.3
+                
             }
             
             else {
                 display.innerHTML = `Valor incorreto para score`
+                
             }
-
-        const payCalculate = (payOne.value + payTwo.value + payThree.value) / 3 
         
+          
+        const payCalculate = (payOne + payTwo + payThree) / 3
+         
             if (payCalculate >= 500 && payCalculate <= 749) {
                payHistoric = 1 * 0.3
             }
@@ -111,8 +118,7 @@
             }
             else {
                 display.innerHTML = `Valor incorreto. Por favor, preencha novamente.`
-            }
-         
-          
-
+            }  
+    
+            
         })
