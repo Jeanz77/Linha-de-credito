@@ -1,2 +1,2 @@
 # Linha de credito
- Este programa tem como objetivo auxiliar na tomada de decisão de setores financeiros quanto abertura de linha de crédito para novos clientes
+ Este programa tem como objetivo auxiliar setores financeiros na tomada de decisões quanto abertura de linha de crédito, utilizando de parametros chave para obtenção de resultados.
