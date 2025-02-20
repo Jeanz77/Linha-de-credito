@@ -1,56 +1,64 @@
+
+:root {
+    --aspect-ratio: 16/9;
+    --base-width: 90%
+}
+
+
 body {
     background-color: #242222;
-    text-align: center;
-    align-items: left;
-    vertical-align: auto;
-    padding: 0%;
     font: 12pt arial;
+    text-align: left;
+    max-width: 1200px;
+    min-width: 300px;
+    height: auto;
+    
+    
 }
 
 h1 {
-    font: 26pt arial;
-    background-color: brown;
-    padding: 1%;
-    margin: auto 14%;
-    
+    font-family: 'Arial', system-ui, sans-serif;
+    background-color: #3673cf;
+    margin: 5% 0 5% 5%;
+    padding: 2%;
+    margin-left: 10%;
+    text-align: center;
+    border-radius: 10px;
+    width: 525px;
 }
 
-p {
-    padding: 2%;
-    margin: auto 13%;
-    font: 10pt arial;
-    
-    
-    
+p1 {
+    margin-left: 10%;
+    font: 11pt arial;
 }
+
 
 .inputs {
-    padding: 4%;
-    margin: auto 10%;
-    
+    margin: 0 0 0 5%;
+    padding: 5%;
+    text-align: left;
+}
+
+#button {
+    width: 135px;
+    height: 35px;
+    background-color: #3673cf;
+    margin-left: 10%;
+    border-radius: 5px;
 }
 
 #display {
-
     width: 525px;
     height: 160px;
-    padding: 2%;
-    margin: auto 14%;
     outline: 1px solid #8a8585;
     background-color: #3f3d3d;
     line-height: 1.5;
-    
-    
-
-    
+    margin: 0 0 0 10%;
+    padding: 2%;
 }
 
 #rodape {
     text-align: center;
-    align-items: center;
-    vertical-align: auto;
     padding: 2%;
-    margin: auto 14%;
-    
-
+    margin: 0 0 0 8%;
 }

@@ -44,6 +44,7 @@ button.addEventListener('click', () => {
     }
 
     const payCalculate = (payOneValue + payTwoValue + payThreeValue) / 3;
+    let payLimit = 0 ;
     if (isNaN(payCalculate)) {
         display.innerHTML = 'Valores de pagamento inválidos.';
         return;
@@ -79,14 +80,18 @@ button.addEventListener('click', () => {
 
     const total = scorePoint + payHistoricPoint + payConditionsPoint + clientAgePoint;
 
-    if (total >= 4) {
+    if (total >= 4) { 
+        payLimit = payCalculate * 3;
         display.innerHTML = `Pontuação: ${total.toFixed(2)} - Cliente com baixo risco. ` +
-            `Oferecer uma linha de crédito flexível seria interessante.`;
+            `Oferecer uma linha de crédito flexível seria interessante. ` +
+            ` Valor sugerido para linha de crédito: ${Math.ceil(payLimit.toFixed(2))} `;
     } else if (total >= 3) {
+        payLimit = payCalculate * 2;
         display.innerHTML = `Pontuação: ${total.toFixed(2)} - Cliente com médio risco. ` +
-            `Linha de crédito requer acompanhamento.`;
+            `Linha de crédito requer acompanhamento.` +
+            ` Valor sugerido para linha de crédito: ${Math.ceil(payLimit.toFixed(2))} `;
     } else {
         display.innerHTML = `Pontuação: ${total.toFixed(2)} - Cliente com alto risco. ` +
-            `Não é aconselhável oferecer crédito.`;
+            ` Não é aconselhável oferecer linha de crédito.`;
     }
 });
