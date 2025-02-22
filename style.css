@@ -1,8 +1,8 @@
 
-:root {
+/*:root {
     --aspect-ratio: 16/9;
     --base-width: 90%
-}
+} */
 
 
 body {
@@ -24,13 +24,14 @@ h1 {
     margin-left: 10%;
     text-align: center;
     border-radius: 10px;
-    width: 525px;
+    width: 555px;
 }
 
 p1 {
     margin-left: 10%;
-    font: 11pt arial;
-}
+    font: 12pt arial;
+    
+} 
 
 
 .inputs {
@@ -48,8 +49,8 @@ p1 {
 }
 
 #display {
-    width: 525px;
-    height: 160px;
+    width: 555px;
+    height: 120px;
     outline: 1px solid #8a8585;
     background-color: #3f3d3d;
     line-height: 1.5;
@@ -58,7 +59,7 @@ p1 {
 }
 
 #rodape {
-    text-align: center;
+    text-align: left;
     padding: 2%;
     margin: 0 0 0 8%;
 }

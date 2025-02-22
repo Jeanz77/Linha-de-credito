@@ -12,17 +12,17 @@ function payConditionsInfo() {
         "1) Péssimo - Cliente com protestos ou sem comprovação de faturamento \n\n" +
         "2) Ruim - Comprovante de faturamento inferior ao valor médio dos pedidos  \n\n" +
         "3) Regular - Comprovante de faturamento igual ao valor médio dos pedidos   \n\n" +
-        "4) Bom - Comprovante de faturamento duas vezes maior ao valor médio dos pedidos  \n\n" +
-        "5) Excelente - Comprovante de faturamento três vezes maior ao valor médio dos pedidos");
+        "4) Bom - Comprovante de faturamento duas vezes maior que o valor médio dos pedidos  \n\n" +
+        "5) Excelente - Comprovante de faturamento três vezes maior que o valor médio dos pedidos");
 }
 
 function clientAgeInfo() {
     window.alert(
-        "1) Péssimo - Sem histórico de compra e/ou CNPJ com menos de um ano de existência \n\n" +
-        "2) Ruim - Sem histórico de compra nos últimos dois meses  \n\n" +
-        "3) Regular - Compra esporadicamente ao menos duas vezes por mês  \n\n" +
-        "4) Bom - Compra semanalmente ou é cliente a mais de dois anos fazendo compras regularmente   \n\n" +
-        "5) Excelente - Compra semanalmente ou é cliente a mais de quatro anos fazendo compras regularmente  ");
+        "1) Péssimo - Sem histórico de compra | CNPJ com menos de um ano de existência \n\n" +
+        "2) Ruim - Sem histórico de pedidos nos últimos dois meses  \n\n" +
+        "3) Regular - Realiza pedidos ao menos duas vezes por mês  \n\n" +
+        "4) Bom - Realiza pedidos semanalmente | Cliente a mais de um ano \n\n" +
+        "5) Excelente - Realiza pedidos semanalmente | Cliente a mais de dois anos");
 }
 
 button.addEventListener('click', () => {
