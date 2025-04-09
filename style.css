@@ -1,64 +1,148 @@
 
-:root {
-    --aspect-ratio: 16/9;
-    --base-width: 90%
-}
-
-
 body {
-    background-color: #242222;
-    font: 12pt arial;
-    text-align: left;
-    max-width: 1200px;
-    min-width: 300px;
-    height: auto;
-    
-    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 h1 {
-    font-family: 'Arial', system-ui, sans-serif;
-    background-color: #3673cf;
-    margin: 5% 0 5% 5%;
-    padding: 2%;
-    margin-left: 10%;
+    color: #2c3e50;
     text-align: center;
-    border-radius: 10px;
-    width: 525px;
+    margin-bottom: 15px;
+    font-size: 2em;
 }
 
-p1 {
-    margin-left: 10%;
-    font: 11pt arial;
+.p1 {
+    display: block;
+    max-width: 600px;
+    text-align: center;
+    color: #7f8d83;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    
 }
 
-
+/* Quadro */
 .inputs {
-    margin: 0 0 0 5%;
-    padding: 5%;
-    text-align: left;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    background-color: #1a3f58;
 }
 
-#button {
-    width: 135px;
-    height: 35px;
-    background-color: #3673cf;
-    margin-left: 10%;
-    border-radius: 5px;
+.inputs p {
+    color: #34495e;
+    margin: 15px 0 5px 0;
+    font-weight: 00;
+    
 }
+
+/*Campo inserção dados */
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: #292a2b;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.1);
+}
+
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button#button {
+    background: #1a3f58;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 550px;
+    margin-top: 10px;
+    
+}
+
+button#button:hover {
+    background: #2980b9;
+}
+
+button[onclick] {
+    background: #7f8c8d;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding: 0;
+}
+
 
 #display {
-    width: 525px;
-    height: 160px;
-    outline: 1px solid #8a8585;
-    background-color: #3f3d3d;
-    line-height: 1.5;
-    margin: 0 0 0 10%;
-    padding: 2%;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    font-weight: 500;
+    color: #2c3e50;
 }
 
+
 #rodape {
+    margin-top: auto;
+    color: #7f8c8d;
+    font-size: 0.8em;
+    padding: 15px;
     text-align: center;
-    padding: 2%;
-    margin: 0 0 0 8%;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .inputs {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    button#button {
+        padding: 10px 20px;
+    }
+}
+
+mark {
+    background-color: #e0e0e0 !important;
+    color: #2c3e50 !important;
+    padding: 2px 5px !important;
+    border-radius: 3px;
 }

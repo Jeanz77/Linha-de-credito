@@ -9,20 +9,19 @@ const display = document.getElementById('display');
 
 function payConditionsInfo() {
     window.alert(
-        "1) Péssimo - Cliente com protestos ou sem comprovação de faturamento \n\n" +
-        "2) Ruim - Comprovante de faturamento inferior ao valor médio dos pedidos  \n\n" +
-        "3) Regular - Comprovante de faturamento igual ao valor médio dos pedidos   \n\n" +
-        "4) Bom - Comprovante de faturamento duas vezes maior ao valor médio dos pedidos  \n\n" +
-        "5) Excelente - Comprovante de faturamento três vezes maior ao valor médio dos pedidos");
+        "(5) Comprovantes recentes de pagamento a outros fornecedores superior " +  
+        "ao valor médio dos pedidos realizados pelo cliente. \n\n" +
+        "(3-4) Comprovantes com valor maior ou igual ao valor médio de pedido.\n\n" +
+        "(2) Comprovantes com valor inferior ao valor médio de pedido.   \n\n" +
+        "(1) Ausência de comprovação.");
 }
 
 function clientAgeInfo() {
     window.alert(
-        "1) Péssimo - Sem histórico de compra e/ou CNPJ com menos de um ano de existência \n\n" +
-        "2) Ruim - Sem histórico de compra nos últimos dois meses  \n\n" +
-        "3) Regular - Compra esporadicamente ao menos duas vezes por mês  \n\n" +
-        "4) Bom - Compra semanalmente ou é cliente a mais de dois anos fazendo compras regularmente   \n\n" +
-        "5) Excelente - Compra semanalmente ou é cliente a mais de quatro anos fazendo compras regularmente  ");
+        "(5) Cliente a mais de dois anos realizando pedidos frequentemente (semanal). \n\n" +
+        "(3-4) Cliente a menos de dois anos e/ou realiza pedidos esporadicamente (mensal ou quinzenal).  \n\n" +
+        "(2) Cliente sem histórico de pedido nos últimos dois meses. \n\n" +
+        "(1) Cliente sem histórico de pedido.");
 }
 
 button.addEventListener('click', () => {
@@ -40,6 +39,16 @@ button.addEventListener('click', () => {
     }
     if (scoreValue < 1 || scoreValue > 1000) {
         display.innerHTML = 'Score deve estar entre 1 e 1000.';
+        return;
+    }
+
+    if (isNaN(clientAgeValue)) {
+        display.innerHTML = 'Valor para histórico inválido';
+        return;
+    }
+
+    if (isNaN(payConditionsValue)) {
+        display.innerHTML = 'Valor para capacidade de pagamento inválido';
         return;
     }
 

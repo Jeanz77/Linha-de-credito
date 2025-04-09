@@ -9,20 +9,20 @@
 </head>
 <body>  
     <h1><strong>Avaliação para linha de crédito</strong></h1>
-    <p1>Preencha inserindo os valores solicitados. Utilize o botão <mark style="background-color: rgb(96, 99, 100); color: black; padding: 0.5%"><strong>?</strong></mark> para mais informações</p1>
+    <p1>Preencha inserindo os valores solicitados. Clique em <mark style="background-color: #606364; color: black; padding: 0.5%"><strong>?</strong></mark> para mais informações</p1>
    
 
     <div class='inputs'>
         <p>Insira um valor para score (Serasa): </p>
-        <input id='score' ></input><br><br>
-        <p>Insira um valor para capacidade de pagamento (1-5): </p>
-        <input id='payConditions'></input> <button onclick="payConditionsInfo()">?</button><br><br>
-        <p>Insira um valor para histórico (1-5): </p>
-        <input id='clientAge'></input> <button onclick="clientAgeInfo()">?</button><br><br>
+        <input id='score' placeholder="1-1000"></input> 
+        <p>Insira um valor para capacidade de pagamento<button onclick="payConditionsInfo()" style=" background-color: #3498db;">?</button> </p> 
+        <input id='payConditions' placeholder="1-5"></input>
+        <p>Insira um valor para histórico <button onclick="clientAgeInfo()" style=" background-color: #3498db;">?</button> </p>
+        <input id='clientAge' placeholder="1-5"></input>
         <p>Insira o valor dos três últimos pedidos: </p>
-        <input id='payOne'/> <br><br>
-        <input id='payTwo'/> <br><br>
-        <input id='payThree'/><br><br>
+        <input id='payOne' placeholder="R$"/> <br><br>
+        <input id='payTwo' placeholder="R$"/> <br><br>
+        <input id='payThree' placeholder="R$"/><br><br>
     </div>
 
     <button id='button'>Enviar</button><br><br>
