@@ -18,15 +18,20 @@ h1 {
     font-size: 2em;
 }
 
-.p1 {
+p1 {
     display: block;
     max-width: 600px;
     text-align: center;
     color: #7f8d83;
     margin-bottom: 30px;
-    font-size: 0.9em;
-    
+    font-size: 1.0em;    
 }
+
+p2 {
+    color: white;
+    text-align: left;
+    max-width: 500px;
+} 
 
 /* Quadro */
 .inputs {
