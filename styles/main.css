@@ -19,7 +19,7 @@ h1 {
     font-size: 2em;
 }
 
-#p1 {
+.p1 {
     display: block;
     max-width: 600px;
     text-align: center;
@@ -28,7 +28,7 @@ h1 {
     font-size: 1.0em;    
 }
 
-#p2 {
+.p2 {
     color: white;
     text-align: left;
     max-width: 500px;
